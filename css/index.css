@@ -1,0 +1,30 @@
+#content{
+    max-width: 600px !important;
+    margin: 5px auto;
+}
+#content #basic-addon1{
+    cursor: pointer;
+}
+#content .list-group{
+    margin-top: 10px;
+    cursor: pointer;
+}
+.deleted{
+    text-decoration: line-through;
+    background-color: #e1e1e1;
+}
+.badge1{
+    float: right;
+    padding: 5px 10px;
+    margin-right: 3px;
+    display: inline-block;
+    min-width: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: 10px;
+}

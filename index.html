@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="indexApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular1 Demo</title>
+    <!-- bootstrap.css文件 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body ng-controller="indexController" ng-cloak>
+
+<div id="content">
+    <h1>基于anuglar1的todo功能</h1>
+
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="输入一条新的记录" aria-describedby="basic-addon1" ng-model="input">
+        <span class="input-group-addon" id="basic-addon1" ng-click="addRecord()">新增</span>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="r in list" ng-class="{'deleted':r.completeFlag}">
+            <span class="badge1 btn-danger" ng-click="deleteRecord($index)">删除</span>
+            <span class="badge1 btn-success" ng-class="{'btn-info':r.completeFlag}" ng-click="completeRecord($index)">{{r.completeFlag ? '撤销' : '完成'}}</span>
+            <span>{{r.value}}</span>
+        </li>
+    </ul>
+
+    <h5 ng-show="list.length == 0">暂无记录！</h5>
+
+</div>
+
+<!-- 引入angular.js文件 -->
+<script src="js/angular/angular.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
