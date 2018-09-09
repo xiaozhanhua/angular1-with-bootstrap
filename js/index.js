@@ -6,7 +6,7 @@ var app = angular.module('indexApp', []);
 /**
  * 服务，用来请求后端api（这里暂时没用到）
  */
-app.service("PurchaseService", ["$http", function ($http) {
+app.service("IndexService", ["$http", function ($http) {
     return {
 
     }
